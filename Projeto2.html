@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Grupo de Amigos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">🌟 Grupo de Amigos 🌟</h1>
+        <p>Organize encontros e deixe recados com carinho</p>
+    </header>
+
+    <main>
+        <h2>📅 Marcar novo encontro</h2>
+        <form id="formEncontro">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="local">Local:</label>
+            <input type="text" id="local" name="local" required>
+
+            <button type="submit">Marcar encontro</button>
+        </form>
+
+        <h3>Próximos Encontros:</h3>
+        <ul id="listaEncontros">
+            </ul>
+
+        <hr>
+
+        <h2>💬 Mural de recados</h2>
+        <form id="formRecado" enctype="multipart/form-data">
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <label for="foto">Foto (opcional):</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+
+            <button type="submit">Enviar recado</button>
+        </form>
+
+        <h3>Mensagens recentes:</h3>
+        <ul id="listaRecados">
+            <li>
+                <strong>Ana:</strong> Vamos marcar algo no sábado?<br>
+                <img class="imagem" src="imagens/ana.png" alt="Foto da Ana">
+                <button class="delete-btn">Excluir</button>
+            </li>
+            <li>
+                <strong>Maria:</strong> Estou livre depois das 18h!<br>
+                <img class="imagem" src="imagens/maria.png" alt="Foto da Maria">
+                <button class="delete-btn">Excluir</button>
+            </li>
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
